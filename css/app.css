@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 .header__hero {
-  grid-row: 2/13;
+  grid-row: 2/12;
   grid-column: 1/11;
 }
 
@@ -92,6 +92,10 @@ body {
 }
 .hero__btn--blue {
   background-color: hsl(231deg, 69%, 60%);
+}
+
+main {
+  margin: 5rem 0;
 }
 
 .feature {
