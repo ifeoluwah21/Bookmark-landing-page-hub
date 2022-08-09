@@ -8,6 +8,7 @@
 body {
   width: 100%;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -26,6 +27,8 @@ body {
   justify-self: self-end;
   align-self: center;
   cursor: pointer;
+  width: 24px;
+  text-align: center;
 }
 .header__hero {
   grid-row: 2/14;
@@ -212,7 +215,7 @@ body {
 }
 
 .app {
-  width: 90%;
+  width: 80%;
   margin: 3rem auto;
   box-shadow: 1px 5px 10px 0px #888;
   padding: 1rem 0;
@@ -245,4 +248,127 @@ body {
 .app__btn--blue {
   color: #ffffff;
   background-color: hsl(231deg, 69%, 60%);
+}
+
+.inquiry {
+  width: 92%;
+  margin: 1.5rem auto;
+}
+.inquiry__about {
+  text-align: center;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+.inquiry__title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: hsl(229deg, 31%, 21%);
+}
+.inquiry__text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: hsl(229deg, 8%, 60%);
+}
+.inquiry__term {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  color: hsl(229deg, 31%, 21%);
+  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+}
+.inquiry__definition {
+  margin: 1rem 0;
+}
+.inquiry__btn {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  border: 0;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 2px 2px 4px 1px grey;
+}
+.btn--blue {
+  background-color: hsl(231deg, 69%, 60%);
+}
+
+.feedback {
+  background-color: hsl(231deg, 69%, 60%);
+  padding: 2rem 0;
+}
+.feedback__text {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.feedback__title {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 92%;
+  padding: 0 0 1.5rem 0;
+  color: #ffffff;
+  margin: 0 auto;
+}
+.feedback__form {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.form {
+  width: 92%;
+  margin: 0 auto;
+}
+.form__email {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  color: hsl(229deg, 8%, 60%);
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.form__btn {
+  width: 80%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 94%, 66%);
+  color: #ffffff;
+}
+
+.footer {
+  background-color: hsl(229deg, 31%, 21%);
+  text-align: center;
+  padding: 2rem 0;
+}
+.footer__list {
+  margin: 1rem 0;
+}
+.footer__item {
+  padding: 1rem 0;
+}
+.footer__item > a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: inherit;
+}
+.footer__social-logo-container {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=app.css.map */

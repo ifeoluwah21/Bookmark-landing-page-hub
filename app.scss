@@ -14,6 +14,7 @@ $primary-red: hsl(0, 94%, 66%);
 body {
   width: 100%;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 //Header 10 columns grid system
 .header {
@@ -32,6 +33,8 @@ body {
     justify-self: self-end;
     align-self: center;
     cursor: pointer;
+    width: 24px;
+    text-align: center;
   }
 
   &__hero {
@@ -233,7 +236,7 @@ body {
 }
 
 .app {
-  width: 90%;
+  width: 80%;
   margin: 3rem auto;
   box-shadow: 1px 5px 10px 0px #888;
   padding: 1rem 0;
@@ -269,5 +272,136 @@ body {
       color: #ffffff;
       background-color: $primary-blue;
     }
+  }
+}
+
+.inquiry {
+  width: 92%;
+  margin: 1.5rem auto;
+  &__about {
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1.5rem 0;
+  }
+  &__title {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: $dark-blue;
+  }
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $gray-blue;
+  }
+
+  // &__list {
+  // }
+  &__term {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    color: $dark-blue;
+    border-bottom: 1px solid $gray-blue;
+  }
+
+  &__definition {
+    margin: 1rem 0;
+  }
+  &__btn {
+    margin: 2rem 0;
+    text-align: center;
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  border: 0;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+  box-shadow: 2px 2px 4px 1px grey;
+  &--blue {
+    background-color: hsl(231deg, 69%, 60%);
+  }
+}
+
+.feedback {
+  background-color: $primary-blue;
+  padding: 2rem 0;
+  &__text {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  &__title {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 92%;
+    padding: 0 0 1.5rem 0;
+    color: #ffffff;
+    margin: 0 auto;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+}
+
+.form {
+  width: 92%;
+  margin: 0 auto;
+  &__email {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    color: $gray-blue;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    width: 80%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: $primary-red;
+    color: #ffffff;
+  }
+}
+
+.footer {
+  background-color: $dark-blue;
+  text-align: center;
+  padding: 2rem 0;
+  &__list {
+    margin: 1rem 0;
+  }
+  &__item {
+    padding: 1rem 0;
+
+    & > a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffffff;
+      font-family: inherit;
+    }
+  }
+
+  &__social-logo-container {
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
