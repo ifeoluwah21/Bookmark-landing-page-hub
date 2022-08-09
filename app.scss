@@ -38,7 +38,7 @@ body {
   }
 
   &__hero {
-    grid-row: 2/14;
+    grid-row: 2/13;
     grid-column: 1/11;
   }
 }
@@ -113,8 +113,7 @@ body {
 
 .feature {
   width: 92%;
-  margin-inline: auto;
-  margin-bottom: 1.5rem;
+  margin: 1rem auto 1.5rem;
   &__title {
     font-size: 1.5rem;
     color: $dark-blue;
