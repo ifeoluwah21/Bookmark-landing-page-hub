@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 .header__hero {
-  grid-row: 2/12;
+ /* grid-row: 2/12;*/
   grid-column: 1/11;
 }
 
