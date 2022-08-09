@@ -35,13 +35,16 @@ body {
   grid-column: 1/11;
 }
 
-.hero__img-container, .hero__img {
+.hero__img-container {
+  width: 100;
+}
+.hero__img {
   width: 100%;
 }
 .hero__img-container {
   position: relative;
 }
-.hero__img-container::before {
+.hero__img-container::after {
   content: "";
   top: 0;
   left: 0;
@@ -51,7 +54,7 @@ body {
   transform: translate(20%, 25%);
   z-index: -1;
   border-bottom-left-radius: 20%;
-  width: 100%;
+  width: 87%;
 }
 .hero__about {
   margin-top: 2rem;
