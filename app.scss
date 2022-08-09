@@ -38,7 +38,7 @@ body {
   }
 
   &__hero {
-    grid-row: 2/13;
+    grid-row: 2/12;
     grid-column: 1/11;
   }
 }
@@ -110,7 +110,9 @@ body {
     }
   }
 }
-
+main {
+  margin: 5rem 0;
+}
 .feature {
   width: 92%;
   margin: 1rem auto 1.5rem;
