@@ -149,7 +149,7 @@ main {
       border-top: 1px solid $gray-blue;
     }
 
-    &:hover > p {
+    &.active > p {
       border-color: $primary-red;
     }
 
@@ -160,6 +160,15 @@ main {
       border-bottom: 4px solid transparent;
       transition: all 1s ease-in-out;
       color: $dark-blue;
+    }
+  }
+
+  &__tab-1,
+  &__tab-2,
+  &__tab-3 {
+    display: none;
+    &.active {
+      display: block;
     }
   }
 }
@@ -365,20 +374,20 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border: none;
-    width: 80%;
-    color: $gray-blue;
+    width: 98%;
+    color: hsl(229deg, 8%, 60%);
     font-family: inherit;
     font-size: 1rem;
-    margin-bottom: 1rem;
   }
 
   &__btn {
     width: 80%;
-    padding: 0.5rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: 600;
+    margin-top: 1rem;
     background-color: $primary-red;
     color: #ffffff;
   }
@@ -413,7 +422,7 @@ main {
 
 .nav {
   position: fixed;
-  display: none;
+  transform: translateX(100%);
   top: 0;
   left: 0;
   bottom: 0;
@@ -421,9 +430,15 @@ main {
   z-index: 2;
   width: 100%;
   height: 100%;
+  display: none;
   background: hsl(229deg, 31%, 21%);
   filter: opacity(0.9);
   overflow-y: scroll;
+  transition: display 0.2s, transform 0.5s ease-in;
+  &.show {
+    transform: translateX(0);
+    display: block;
+  }
   &__logo {
     width: 92%;
     margin: 1rem auto;
@@ -467,5 +482,27 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+.error {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &.active {
+    background-color: $primary-red;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    align-self: self-start;
+    padding-left: 1rem;
+    color: #ffffff;
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 }

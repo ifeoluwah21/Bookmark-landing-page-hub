@@ -132,7 +132,7 @@ main {
 .feature-detail__item:first-of-type {
   border-top: 1px solid hsl(229deg, 8%, 60%);
 }
-.feature-detail__item:hover > p {
+.feature-detail__item.active > p {
   border-color: hsl(0deg, 94%, 66%);
 }
 .feature-detail__item > p {
@@ -142,6 +142,12 @@ main {
   border-bottom: 4px solid transparent;
   transition: all 1s ease-in-out;
   color: hsl(229deg, 31%, 21%);
+}
+.feature-detail__tab-1, .feature-detail__tab-2, .feature-detail__tab-3 {
+  display: none;
+}
+.feature-detail__tab-1.active, .feature-detail__tab-2.active, .feature-detail__tab-3.active {
+  display: block;
 }
 
 .tab-1__img-container,
@@ -339,19 +345,19 @@ main {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: none;
-  width: 80%;
+  width: 98%;
   color: hsl(229deg, 8%, 60%);
   font-family: inherit;
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 .form__btn {
   width: 80%;
-  padding: 0.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 600;
+  margin-top: 1rem;
   background-color: hsl(0deg, 94%, 66%);
   color: #ffffff;
 }
@@ -383,7 +389,7 @@ main {
 
 .nav {
   position: fixed;
-  display: none;
+  transform: translateX(100%);
   top: 0;
   left: 0;
   bottom: 0;
@@ -391,9 +397,15 @@ main {
   z-index: 2;
   width: 100%;
   height: 100%;
+  display: none;
   background: hsl(229deg, 31%, 21%);
   filter: opacity(0.9);
   overflow-y: scroll;
+  transition: display 0.2s, transform 0.5s ease-in;
+}
+.nav.show {
+  transform: translateX(0);
+  display: block;
 }
 .nav__logo {
   width: 92%;
@@ -433,4 +445,25 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.error {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.error.active {
+  background-color: hsl(0deg, 94%, 66%);
+}
+.error__text {
+  font-size: 0.8rem;
+  align-self: self-start;
+  padding-left: 1rem;
+  color: #ffffff;
+  display: none;
+}
+.error__text.active {
+  display: block;
 }/*# sourceMappingURL=app.css.map */
