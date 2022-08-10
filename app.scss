@@ -19,7 +19,7 @@ body {
 //Header 10 columns grid system
 .header {
   display: grid;
-  grid: auto-flow 10vh / repeat(10, 10%);
+  grid: repeat(10, 10vh) / repeat(10, 10%);
   width: 92%;
   margin: 0 auto;
   &__logo {
@@ -38,7 +38,7 @@ body {
   }
 
   &__hero {
-    grid-row: 2/12;
+    grid-row: 2/11;
     grid-column: 1/11;
   }
 }
