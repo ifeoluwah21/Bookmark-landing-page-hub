@@ -320,6 +320,9 @@ main {
   &__definition {
     margin: 1rem 0;
     display: none;
+    &.active {
+      display: block;
+    }
   }
   &__btn {
     margin: 2rem 0;

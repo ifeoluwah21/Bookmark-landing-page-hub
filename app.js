@@ -53,3 +53,34 @@ function refactorClassName(parent) {
         item.classList.remove(`active`)
     })
 }
+
+// FAQ LIST FEATURES
+// GETTING THE LIST
+const faq = document.querySelector(`.inquiry__list`);
+faq.addEventListener(`click`, function (event) {
+    if (event.target.matches(`.inquiry__term`)) {
+        let key = event.target.dataset.faq;
+        refactorDlClassName(faq)
+        const tab = faq.querySelector(`.inquiry__definition[data-faq="${key}"]`);
+        tab.classList.add(`active`)
+    }
+
+    if (event.target.matches(`.inquiry__term img`) || event.target.matches(`.inquiry__term img`)) {
+        let key = event.target.parentElement.parentElement.dataset.faq;
+        refactorDlClassName(faq)
+        const tab = faq.querySelector(`.inquiry__definition[data-faq="${key}"]`);
+        tab.classList.add(`active`)
+    }
+})
+
+// FUNCTION THAT REMOVES ALL THE ACTIVE CLASSES ON DEFINITION LIST
+function refactorDlClassName(parent) {
+    let arrDt = parent.querySelectorAll(`.inquiry__term`);
+    let arrDd = parent.querySelectorAll(`.inquiry__definition[data-faq]`);
+    arrDt.forEach(item => {
+        item.classList.remove(`active`)
+    })
+    arrDd.forEach(item => {
+        item.classList.remove(`active`)
+    })
+}

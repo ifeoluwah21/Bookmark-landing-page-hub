@@ -293,6 +293,9 @@ main {
   margin: 1rem 0;
   display: none;
 }
+.inquiry__definition.active {
+  display: block;
+}
 .inquiry__btn {
   margin: 2rem 0;
   text-align: center;
