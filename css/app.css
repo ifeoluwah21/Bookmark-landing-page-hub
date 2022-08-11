@@ -630,7 +630,7 @@ main {
   .hero__text {
     text-align: left;
   }
-  .hero__bth-container {
+  .hero__btn-container {
     max-width: 350px;
   }
   .hero__about {
