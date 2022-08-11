@@ -225,10 +225,11 @@ main {
     border-radius: 10px;
     background-color: hsl(231deg, 69%, 60%);
     color: hsl(0deg, 0%, 100%);
-    border: 0;
+    border: 2px solid transparent;
     text-transform: capitalize;
     font-family: "Rubik", sans-serif;
     box-shadow: 2px 2px 4px 1px grey;
+    transition: all 0.5s ease;
     cursor: pointer;
   }
 }
@@ -739,6 +740,13 @@ main {
       width: 45%;
     }
 
+    &__btn {
+      &:hover {
+        border-color: $primary-blue;
+        color: $primary-blue;
+        background-color: #ffffff;
+      }
+    }
     &__img {
       width: 85%;
     }

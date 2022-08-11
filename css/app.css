@@ -207,10 +207,11 @@ main {
   border-radius: 10px;
   background-color: hsl(231deg, 69%, 60%);
   color: hsl(0deg, 0%, 100%);
-  border: 0;
+  border: 2px solid transparent;
   text-transform: capitalize;
   font-family: "Rubik", sans-serif;
   box-shadow: 2px 2px 4px 1px grey;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -672,6 +673,13 @@ main {
 .tab-2__img-container,
 .tab-3__img-container {
     width: 45%;
+  }
+  .tab-1__btn:hover,
+.tab-2__btn:hover,
+.tab-3__btn:hover {
+    border-color: hsl(231deg, 69%, 60%);
+    color: hsl(231deg, 69%, 60%);
+    background-color: #ffffff;
   }
   .tab-1__img,
 .tab-2__img,
