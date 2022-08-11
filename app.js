@@ -60,16 +60,21 @@ const faq = document.querySelector(`.inquiry__list`);
 faq.addEventListener(`click`, function (event) {
     if (event.target.matches(`.inquiry__term`)) {
         let key = event.target.dataset.faq;
-        refactorDlClassName(faq)
+        if (event.target.classList.contains(`active`)) {
+            return refactorDlClassName(faq)
+        }
+        refactorDlClassName(faq);
         const tab = faq.querySelector(`.inquiry__definition[data-faq="${key}"]`);
-        tab.classList.add(`active`)
+        tab.classList.add(`active`);
+        event.target.classList.add(`active`);
     }
 
-    if (event.target.matches(`.inquiry__term img`) || event.target.matches(`.inquiry__term img`)) {
+    if (event.target.matches(`.inquiry__term svg`) || event.target.matches(`.inquiry__term img`)) {
         let key = event.target.parentElement.parentElement.dataset.faq;
         refactorDlClassName(faq)
         const tab = faq.querySelector(`.inquiry__definition[data-faq="${key}"]`);
         tab.classList.add(`active`)
+        event.target.parentElement.parentElement.classList.add(`active`);
     }
 })
 
@@ -84,3 +89,29 @@ function refactorDlClassName(parent) {
         item.classList.remove(`active`)
     })
 }
+
+
+// PREVENT DEFAULT EVENT AND ACTION ON FORM
+
+const form = document.querySelector(`.form`);
+form.addEventListener(`submit`, (e) => {
+    e.preventDefault();
+})
+
+// INPUT VALIDATION
+
+const input = form.querySelector(`.form__email`);
+const errorBox = form.querySelector(`.error`);
+const errorText = form.querySelector(`.error__text`);
+
+input.addEventListener(`blur`, (event) => {
+    let value = input.value;
+    if (value.includes(`@`) && value !== ``) {
+        errorText.classList.remove(`active`);
+        return errorBox.classList.remove(`active`);
+
+    } else {
+        errorText.classList.add(`active`);
+        return errorBox.classList.add(`active`);
+    }
+})
