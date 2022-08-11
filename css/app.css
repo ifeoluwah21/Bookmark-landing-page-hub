@@ -289,18 +289,58 @@ main {
   color: hsl(229deg, 31%, 21%);
   border-bottom: 1px solid hsl(229deg, 8%, 60%);
 }
+.inquiry__term.active span {
+  transform: rotate(180deg);
+}
+.inquiry__term.active span svg {
+  transform: rotate(180deg);
+}
+.inquiry__term.active span svg path {
+  stroke: hsl(0deg, 94%, 66%);
+}
+.inquiry__term span svg {
+  transition: all 0.5s ease-in;
+}
+.inquiry__term span svg path {
+  transition: all 0.5s ease-in;
+}
 .inquiry__definition {
-  margin: 1rem 0;
-  display: none;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.5s ease;
 }
 .inquiry__definition.active {
-  display: block;
+  max-height: 350px;
+  margin: 1rem 0;
+  -webkit-animation: fade 1s ease;
+          animation: fade 1s ease;
 }
 .inquiry__btn {
   margin: 2rem 0;
   text-align: center;
 }
 
+@-webkit-keyframes fade {
+  from {
+    filter: opacity(0);
+    transform: translateY(-20px);
+  }
+  to {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    filter: opacity(0);
+    transform: translateY(-20px);
+  }
+  to {
+    filter: opacity(1);
+    transform: translateY(0);
+  }
+}
 .btn {
   padding: 1rem 1.5rem;
   font-size: 1rem;
